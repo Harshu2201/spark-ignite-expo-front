@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
-import { ArrowRight, Award, Zap, Users, Briefcase, QrCode, ExternalLink } from "lucide-react";
+import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -197,14 +197,6 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-b from-[#1a0b36] to-[#0a0118]">
         <div className="container mx-auto px-4 text-center">
           <CountdownTimer />
-          
-          <div className="mt-12 p-6 bg-black bg-opacity-50 border border-violet-700 rounded-xl inline-block">
-            <h3 className="text-xl font-bold mb-4 text-white">Scan to Register</h3>
-            <div className="flex items-center justify-center p-4 bg-white rounded-lg">
-              <QrCode size={120} className="text-[#0a0118]" />
-            </div>
-            <p className="mt-4 text-gray-400">Or click one of the register buttons above</p>
-          </div>
         </div>
       </section>
       
