@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
-import { ArrowRight, Award, Zap, Users, Briefcase, QrCode } from "lucide-react";
+import { ArrowRight, Award, Zap, Users, Briefcase, QrCode, ExternalLink } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -106,14 +106,38 @@ const Index = () => {
             Where <span className="text-violet-400">Ideas Spark</span>, <span className="text-cyan-400">Innovation Ignites!</span>
           </p>
           
-          <Button 
-            className="text-lg px-8 py-6 rounded-full bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 shadow-lg shadow-violet-500/30 transition-all hover:shadow-violet-500/50 hover:scale-105"
-          >
-            Register Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://unstop.com" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="text-lg px-8 py-6 w-full sm:w-auto rounded-full bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 shadow-lg shadow-violet-500/30 transition-all hover:shadow-violet-500/50 hover:scale-105"
+              >
+                Register on Unstop
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="https://forms.office.com/r/MvmPvpnnYY" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="text-lg px-8 py-6 w-full sm:w-auto rounded-full bg-gradient-to-r from-cyan-600 to-green-600 hover:from-cyan-500 hover:to-green-500 shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50 hover:scale-105"
+              >
+                Microsoft Form
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+          </div>
           
-          <p className="mt-6 text-gray-400">April 22, 2025 | Wadia College of Engineering</p>
+          <p className="mt-6 text-gray-400">April 22, 2025 | Modern Education Society Wadia College of Engineering, Pune</p>
+          
+          <div className="mt-4">
+            <a 
+              href="https://chat.whatsapp.com/B9khcm1zUf6DcK8C2GKFur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors"
+            >
+              <span className="mr-2">Join our WhatsApp Community</span>
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
         
         {/* Floating tech icons could be added here with absolute positioning */}
@@ -179,7 +203,7 @@ const Index = () => {
             <div className="flex items-center justify-center p-4 bg-white rounded-lg">
               <QrCode size={120} className="text-[#0a0118]" />
             </div>
-            <p className="mt-4 text-gray-400">Or click the Register button above</p>
+            <p className="mt-4 text-gray-400">Or click one of the register buttons above</p>
           </div>
         </div>
       </section>
