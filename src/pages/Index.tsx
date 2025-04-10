@@ -2,9 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
-import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink } from "lucide-react";
+import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink, Calendar, FileWarning } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -86,6 +87,16 @@ const Index = () => {
       icon: <Zap size={32} className="text-pink-400" />
     },
   ];
+
+  const rules = [
+    "Teams must consist of 2-4 members.",
+    "Participants must bring their own laptops and any hardware required for their project.",
+    "Projects must be original and developed during the event period.",
+    "The decision of the judges will be final and binding.",
+    "Plagiarism or use of pre-built solutions will lead to disqualification.",
+    "All teams must present their project to the judges during the evaluation phase.",
+    "Registration deadline is April 20, 2025. No late registrations will be accepted."
+  ];
   
   return (
     <div className="min-h-screen flex flex-col bg-[#0a0118]">
@@ -127,6 +138,11 @@ const Index = () => {
           
           <p className="mt-6 text-gray-400">April 22, 2025 | Modern Education Society Wadia College of Engineering, Pune</p>
           
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <Calendar className="h-5 w-5 text-red-400" />
+            <p className="text-red-400 font-semibold">Registration closes on April 20, 2025! Don't miss the opportunity!</p>
+          </div>
+          
           <div className="mt-4">
             <a 
               href="https://chat.whatsapp.com/B9khcm1zUf6DcK8C2GKFur" 
@@ -142,6 +158,49 @@ const Index = () => {
         
         {/* Floating tech icons could be added here with absolute positioning */}
       </div>
+      
+      {/* Rules Section */}
+      <section className="py-16 bg-gradient-to-b from-[#0a0118] to-[#1a0b36]">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center mb-6">
+            <FileWarning className="w-8 h-8 text-yellow-400 mr-3" />
+            <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400">
+              Event Rules
+            </h2>
+          </div>
+          
+          <Card className="max-w-3xl mx-auto bg-black bg-opacity-50 border border-violet-700 p-6 rounded-xl">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="rules" className="border-none">
+                <AccordionTrigger className="text-xl font-semibold text-white hover:text-violet-300 py-4">
+                  View Complete Rules
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-3 text-gray-300">
+                    {rules.map((rule, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-flex items-center justify-center bg-violet-700 text-white rounded-full w-6 h-6 text-sm mr-3 flex-shrink-0 mt-0.5">
+                          {index + 1}
+                        </span>
+                        <span>{rule}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            
+            <div className="mt-6 p-4 bg-violet-900 bg-opacity-30 border border-violet-600 rounded-lg">
+              <div className="flex items-center">
+                <Calendar className="w-6 h-6 text-red-400 mr-2 flex-shrink-0" />
+                <p className="text-red-400 font-semibold">
+                  Registration deadline: April 20, 2025. Don't miss the opportunity to participate!
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
       
       {/* Features Section */}
       <section className="py-16 bg-gradient-to-b from-[#1a0b36] to-[#0a0118]">
