@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
-import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink, Calendar, FileWarning } from "lucide-react";
+import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink, Calendar, FileWarning, UserPlus, GitFork, Gavel, Languages } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -89,6 +89,10 @@ const Index = () => {
   ];
 
   const rules = [
+    "The event is open to all students from any college and academic year.",
+    "Participants can register individually or in teams (max 4 members per team).",
+    "All projects must be original work. Plagiarism will lead to disqualification.",
+    "The official language for presentations and documentation is English.",
     "Teams must consist of 2-4 members.",
     "Participants must bring their own laptops and any hardware required for their project.",
     "Projects must be original and developed during the event period.",
