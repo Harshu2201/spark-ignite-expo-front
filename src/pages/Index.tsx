@@ -1,11 +1,10 @@
-
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
-import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink, Calendar, FileWarning, UserPlus, GitFork, Gavel, Languages } from "lucide-react";
+import { ArrowRight, Award, Zap, Users, Briefcase, ExternalLink, Calendar, FileWarning, UserPlus, GitFork, Gavel, Languages, Download, FileText } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -66,8 +65,8 @@ const Index = () => {
   
   const prizes = [
     { title: "First Prize", amount: "₹10,000", icon: <Award size={40} className="text-yellow-400" /> },
-    { title: "Second Prize", amount: "₹6,000", icon: <Award size={40} className="text-gray-400" /> },
-    { title: "Third Prize", amount: "₹4,000", icon: <Award size={40} className="text-amber-700" /> },
+    { title: "Second Prize", amount: "₹7,000", icon: <Award size={40} className="text-gray-400" /> },
+    { title: "Third Prize", amount: "₹5,000", icon: <Award size={40} className="text-amber-700" /> },
   ];
   
   const features = [
@@ -234,7 +233,7 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-b from-[#0a0118] to-[#1a0b36]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400">
-            Prizes Worth ₹20,000
+            Prizes Worth ₹22,000
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -252,6 +251,85 @@ const Index = () => {
                 </p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Poster Template Section */}
+      <section className="py-16 bg-gradient-to-b from-[#1a0b36] to-[#0a0118]">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center mb-8">
+            <FileText className="w-8 h-8 text-cyan-400 mr-3" />
+            <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400">
+              Poster Template
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <Card className="bg-black bg-opacity-50 border border-violet-700 p-6 rounded-xl shadow-lg shadow-violet-500/20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-xl font-bold mb-4 text-white">Download the Official Poster Template</h3>
+                  <p className="text-gray-300 mb-4">
+                    Use our official template to create your project poster. Follow the guidelines to ensure your presentation meets the competition standards.
+                  </p>
+                  <ul className="space-y-2 text-gray-400 mb-6">
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center text-cyan-400 mr-2">•</span>
+                      <span>A4 size document (210 × 297 mm)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center text-cyan-400 mr-2">•</span>
+                      <span>Include your project title, team members, and college name</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center text-cyan-400 mr-2">•</span>
+                      <span>Highlight the problem statement and your solution</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center text-cyan-400 mr-2">•</span>
+                      <span>Add relevant diagrams and screenshots</span>
+                    </li>
+                  </ul>
+                  <a href="https://docs.google.com/document/d/1MHUYiazKeG1lAdqPJLAP5brxALA5Qpoe/edit?usp=sharing&ouid=114616124311025702007&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      className="w-full sm:w-auto rounded-full bg-gradient-to-r from-cyan-600 to-violet-600 hover:from-cyan-500 hover:to-violet-500 shadow-lg shadow-cyan-500/30 transition-all hover:shadow-cyan-500/50 hover:scale-105"
+                    >
+                      Download Template
+                      <Download className="ml-2 h-5 w-5" />
+                    </Button>
+                  </a>
+                </div>
+
+                <div className="relative bg-gradient-to-br from-violet-900/50 to-blue-900/50 p-4 rounded-lg border border-violet-500 shadow-inner shadow-violet-500/20">
+                  <div className="aspect-[210/297] bg-gray-800/50 rounded-md overflow-hidden relative">
+                    <div className="absolute inset-0 flex flex-col p-5 text-center">
+                      <div className="bg-violet-700/50 mb-2 py-2 rounded">
+                        <h4 className="text-xl font-bold text-white">Project Title</h4>
+                      </div>
+                      <div className="flex-1 flex flex-col justify-between">
+                        <div className="bg-blue-900/30 p-3 rounded-md mb-2">
+                          <p className="text-cyan-300 text-sm">Problem Statement</p>
+                        </div>
+                        <div className="bg-violet-900/30 p-3 rounded-md mb-2 flex-1">
+                          <p className="text-violet-300 text-sm">Solution & Implementation</p>
+                        </div>
+                        <div className="bg-blue-900/30 p-3 rounded-md mb-2">
+                          <p className="text-cyan-300 text-sm">Results & Impact</p>
+                        </div>
+                        <div className="bg-violet-900/30 p-2 rounded-md flex justify-between items-center">
+                          <div className="text-xs text-violet-300">Team Members</div>
+                          <div className="text-xs text-cyan-300">College Name</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-violet-500 to-cyan-500 p-2 rounded-full shadow-lg shadow-violet-500/30">
+                    <FileText className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
