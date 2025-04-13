@@ -65,8 +65,8 @@ const Index = () => {
   
   const prizes = [
     { title: "First Prize", amount: "₹10,000", icon: <Award size={40} className="text-yellow-400" /> },
-    { title: "Second Prize", amount: "₹6,000", icon: <Award size={40} className="text-gray-400" /> },
-    { title: "Third Prize", amount: "₹4,000", icon: <Award size={40} className="text-amber-700" /> },
+    { title: "Second Prize", amount: "₹7,000", icon: <Award size={40} className="text-gray-400" /> },
+    { title: "Third Prize", amount: "₹5,000", icon: <Award size={40} className="text-amber-700" /> },
   ];
   
   const features = [
@@ -233,7 +233,7 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-b from-[#0a0118] to-[#1a0b36]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400">
-            Prizes Worth ₹20,000
+            Prizes Worth ₹22,000
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
